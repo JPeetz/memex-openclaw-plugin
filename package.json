@@ -4,7 +4,10 @@
   "description": "MeMex Zero RAG ContextEngine plugin for OpenClaw \u2014 inject compiled wiki knowledge into every agent session",
   "type": "module",
   "files": [
+    "dist/",
     "skills/",
+    "openclaw.plugin.json",
+    "plugin.yaml",
     "README.md"
   ],
   "scripts": {
