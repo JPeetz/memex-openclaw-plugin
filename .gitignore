@@ -5,3 +5,5 @@ dist/
 *.d.ts.map
 .npm/
 _notes/
+.npmrc
+!skills/

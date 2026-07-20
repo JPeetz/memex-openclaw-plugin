@@ -1,7 +1,7 @@
 {
-  "name": "@memex/openclaw-memex",
+  "name": "@jpeetz/openclaw-memex",
   "version": "0.1.0",
-  "description": "MeMex Zero RAG ContextEngine plugin for OpenClaw — inject compiled wiki knowledge into every agent session",
+  "description": "MeMex Zero RAG ContextEngine plugin for OpenClaw \u2014 inject compiled wiki knowledge into every agent session",
   "type": "module",
   "files": [
     "skills/",
@@ -39,5 +39,8 @@
     "@types/node": "^26.1.1",
     "openclaw": "^2026.7.1-2",
     "typescript": "^7.0.2"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }

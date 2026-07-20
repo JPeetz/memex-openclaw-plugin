@@ -25,7 +25,7 @@ The result: your agent never forgets documented decisions, and never hallucinate
 ## Installation
 
 ```bash
-openclaw plugins install @memex/openclaw-memex
+openclaw plugins install @jpeetz/openclaw-memex
 ```
 
 Or from a local build:
