@@ -1,0 +1,65 @@
+{
+  "id": "memex-openclaw",
+  "name": "MeMex Zero RAG",
+  "kind": "context-engine",
+  "description": "Durable, anti-hallucination wiki memory for OpenClaw agents. Injects compiled knowledge from MeMex Zero RAG's wiki into every assembly pass.",
+  "version": "0.1.0",
+  "minGatewayVersion": "2026.5.28",
+  "secrets": [],
+  "extensions": ["./dist/index.js"],
+  "activation": {
+    "onStartup": true
+  },
+  "skills": [
+    "skills/memex-search"
+  ],
+  "docs": "https://github.com/JPeetz/memex-openclaw-plugin/blob/main/README.md",
+  "license": "Apache-2.0",
+  "repository": "https://github.com/JPeetz/memex-openclaw-plugin",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "wikiPath": {
+        "type": "string",
+        "default": "~/workspace/MeMex-Zero-RAG/wiki/",
+        "description": "Path to the MeMex Zero RAG wiki directory"
+      },
+      "maxInjectEntries": {
+        "type": "number",
+        "default": 5,
+        "minimum": 1,
+        "maximum": 20,
+        "description": "Max wiki entries to inject per assembly"
+      },
+      "maxEntryChars": {
+        "type": "number",
+        "default": 2000,
+        "minimum": 100,
+        "maximum": 10000,
+        "description": "Max chars per injected entry"
+      },
+      "searchMode": {
+        "type": "string",
+        "enum": ["keyword", "semantic", "hybrid"],
+        "default": "keyword",
+        "description": "Wiki search mode"
+      },
+      "respectDecayDates": {
+        "type": "boolean",
+        "default": true,
+        "description": "Whether to respect knowledge decay dates"
+      },
+      "enableConflictDetection": {
+        "type": "boolean",
+        "default": true,
+        "description": "Enable conflict detection on bootstrap"
+      },
+      "verbose": {
+        "type": "boolean",
+        "default": false,
+        "description": "Verbose logging"
+      }
+    }
+  }
+}

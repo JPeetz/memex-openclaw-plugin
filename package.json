@@ -1,0 +1,43 @@
+{
+  "name": "@memex/openclaw-memex",
+  "version": "0.1.0",
+  "description": "MeMex Zero RAG ContextEngine plugin for OpenClaw — inject compiled wiki knowledge into every agent session",
+  "type": "module",
+  "files": [
+    "skills/",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "echo 'Plugin uses OpenClaw extension loader; no compile step needed'",
+    "test": "echo 'TODO: add tests'"
+  },
+  "keywords": [
+    "openclaw",
+    "plugin",
+    "context-engine",
+    "memex",
+    "zero-rag",
+    "memory",
+    "wiki"
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JPeetz/memex-openclaw-plugin"
+  },
+  "openclaw": {
+    "extensions": [
+      "./src/index.ts"
+    ],
+    "name": "MeMex Zero RAG",
+    "description": "Durable, anti-hallucination wiki memory for OpenClaw agents. Injects compiled knowledge from MeMex Zero RAG's wiki into every assembly pass.",
+    "docs": "https://github.com/JPeetz/memex-openclaw-plugin/blob/main/README.md",
+    "minGatewayVersion": "2026.5.28",
+    "secrets": []
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "openclaw": "^2026.7.1-2",
+    "typescript": "^7.0.2"
+  }
+}
