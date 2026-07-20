@@ -30,7 +30,7 @@
   },
   "openclaw": {
     "extensions": [
-      "./src/index.ts"
+      "./dist/index.js"
     ],
     "name": "MeMex Zero RAG",
     "description": "Durable, anti-hallucination wiki memory for OpenClaw agents. Injects compiled knowledge from MeMex Zero RAG's wiki into every assembly pass.",
@@ -51,5 +51,6 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
-  }
+  },
+  "main": "dist/index.js"
 }
